@@ -1,0 +1,167 @@
+@import '../../assets/style/variables.scss';
+.filling-section {
+    width: 210px;
+    // position: relative;
+    .input-title {
+        font-weight: 500;
+        color: $viva-magenta;
+        margin-left: 7px;
+        margin-top: 20px;
+    }
+    .error-text {
+        font-size: 12px;
+        font-weight: 300;
+        color: $viva-magenta;
+        margin-left: 7px;
+    }
+    .fill-inputs {
+        width: 200px;
+        height: 35px;
+        padding: 3px 3px 3px 5px;
+        border: 1px solid $viva-magenta;
+        border-radius: 5px;
+    }
+    // .error-fill-inputs {
+    //     border: 2px dashed $red-error;
+    //     width: 200px;
+    //     height: 35px;
+    //     padding: 3px 3px 3px 5px;
+    //     border-radius: 5px;
+    // }
+    .fill-radio-input {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        outline: none;
+        accent-color: $viva-magenta;
+    }
+    .margin-radio-input {
+        margin-right: 35px;
+    }
+    // .fill-btn {
+    //     width: 90px;
+    //     height: 30px;
+    //     padding: 15px;
+    //     background-color: $viva-magenta;
+    //     border-radius: 5px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     color: white;
+    //     // position: absolute;
+    //     // right: 10px;
+    //     margin: 15px 5px 0px 0px;
+    //     cursor: pointer;
+    //     transition: .3s;
+    // }
+    .fill-btn {
+        position: relative;
+        background: #fb09411e;
+        padding: 8px 20px;
+        margin: 20px 10px;
+        color: $viv-magenta-light;
+        font-size: 18px;
+        transition: .5s;
+    }
+    .fill-btn::before {
+        content: ' ';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $viv-magenta-light;
+        border-left: 2px solid $viv-magenta-light;
+        transition: .5s;
+        transition-delay: .5s;
+    }
+    .fill-btn::after {
+        content: ' ';
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid $viv-magenta-light;
+        border-right: 2px solid $viv-magenta-light;
+        transition: .5s;
+        transition-delay: .5s;
+    }
+    .fill-btn:hover::before,
+    .fill-btn:hover::after {
+        width: 100%;
+        height: 100%;
+        transition-delay: 0s;
+    }
+    .fill-btn:hover {
+        background: $viv-magenta-light;
+        color: white;
+        box-shadow: 0 0 50px $viv-magenta-light;
+        transition-delay: .3s;
+    }
+}
+
+.added-users-box {
+    //width: calc(100vh - 200px);
+    width: 100%;
+    border: 1px solid #ba20603b;
+    border-radius: 5px;
+    margin-left: 25px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    .user-box {
+        width: 200px;
+        height: max-content;
+        border: 1px solid #ba64883b;
+        border-radius: 5px;
+        padding: 24px 23px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        color: $viva-magenta;
+        position: relative;
+        h3 {
+            margin: 0px 5px;
+        }
+        p {
+            margin: 5px 0px;
+        }
+    }
+    .edit-btn {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        top: 3px;
+        left: 7px;
+        cursor: pointer;
+    }
+    .del-btn {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .line1,
+        .line2,
+        .line3 {
+            width: 20px;
+            height: 2px;
+            background-color: $blue-200;
+            margin: 2px 0;
+        }
+        .line1 {
+            transform: rotate(-45deg) translate(2px, 5px);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(45deg) translate(0px, -8px);
+        }
+    }
+}

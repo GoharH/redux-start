@@ -1,0 +1,24 @@
+@import '../../assets/style/variables.scss';
+.header-nav-list {
+    height: 60px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, $viv-magenta-light, $sky-blue-light);
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: purple;
+        position: relative;
+    }
+    li {
+        margin: 0px 15px;
+        font-size: 18px;
+    }
+    li .active {
+        border-bottom: 2px solid rgb(241, 3, 241);
+    }
+    a {
+        color: purple;
+        font-weight: 500;
+    }
+}
